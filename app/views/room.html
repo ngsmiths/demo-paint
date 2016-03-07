@@ -1,0 +1,39 @@
+<div class="wholeRoom">
+	<div class="canvas">
+		<canvas id="canvas" width="1200" height="900" ng-class="{eraseCursor: room.eraseCursor, paintCursor: !room.eraseCursor}"></canvas>
+		<a class="exit" href="#/hallway">
+			<img src="assets/img/exit.png" class="exitIcon"></img>
+			<h1 class="exitText"> Exit Room </h1>
+		</a>
+		<div class="delete" ng-click="room.deleteRoom()" ng-if="room.lastUser && room.user.room!=='Lobby'">
+			<h1 class="deleteText">Delete Room</h1>
+			<img src="assets/img/delete.png" class="deleteIcon"></img>
+		</div>
+		<div class="clear">
+			<div class="clearBucket" ng-if="!room.clearSure" ng-click="room.clearSure=true">
+				<img src="assets/img/bucket.png" class="bucketIcon"></img>
+				<h1 class="clearText">Clear Canvas</h1>
+			</div>
+			<div class="clearSure" ng-if="room.clearSure">
+				<h1 class="clearText cancel" ng-click="room.clearSure=false"> Cancel </h1>
+				<h1 class="clearText sure" ng-click="room.clearCanvas()"> Clear It! </h1>
+			</div>
+		</div>
+	</div>
+	<div class="panel">
+		<div class="user">
+			<div style="background-color:{{room.user.color}}" class="userColor"></div> 
+			<p class='username'>{{room.user.name}}</p>
+		</div>
+		<div class="otherUser" ng-repeat="user in room.users">
+			<p class='otherUsername'>{{user.name}}</p>
+			<div style="background-color:{{user.color}}" class="otherUserColor"></div> 
+		</div>
+		<div class="chooseColor">
+		  <h3 class="title changeColor">Change Color?</h3>
+		  <div ng-repeat="color in room.colors" style="background-color:{{color}}" class="mediumCircle" ng-click="room.setColor(color)">
+		  	<img src="assets/img/eraser.png" class="eraserIcon" ng-if="color==='lightgray'"></img>
+		  </div>
+		</div>
+	</div>
+</div>

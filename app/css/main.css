@@ -1,0 +1,251 @@
+html {
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased; }
+
+html, input, h1, h2, h3, h4, h5, h6, p, a, div, img {
+  font-family: "HelveticaNeue-Light",
+    "Helvetica Neue Light",
+    "Helvetica Neue",
+    Helvetica,
+    Arial,
+    "Lucida Grande",
+    sans-serif;
+  color: white;
+  text-decoration: none;
+  font-weight: 100; }
+
+h1, h2, h3, h4, h5, h6, p, a, div, img {
+  -moz-user-select: none;
+  -o-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none; }
+
+p {
+  margin: 0px 0px; }
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: black; }
+
+.view {
+  margin: -10px -8px; }
+
+.wholeRoom {
+  background-color: lightgray;
+  float: left;
+  width: 100%;
+  overflow-x: hidden; }
+
+#canvas {
+  margin: 0px 0px;
+  text-align: center;
+  background-color: lightgray; }
+
+.canvas {
+  overflow: hidden;
+  float: left; }
+
+.eraseCursor {
+  cursor: url(../assets/img/erase_cursor.png) 40 40, auto; }
+
+.paintCursor {
+  cursor: url(../assets/img/paint_cursor.png) 2.5 2.5, auto; }
+
+.panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 320px;
+  height: 880px;
+  background-color: black;
+  padding: 10px 10px; }
+
+.exit {
+  position: fixed;
+  top: 20px;
+  left: 20px; }
+
+.exit:hover {
+  cursor: pointer; }
+
+.clear {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  color: black; }
+
+.clear:hover {
+  cursor: pointer; }
+
+.delete {
+  position: absolute;
+  top: 20px;
+  right: 355px;
+  color: black; }
+
+.delete:hover {
+  cursor: pointer; }
+
+.exitText, .clearText, .deleteText {
+  color: black;
+  margin: 0px;
+  display: inline-block;
+  -moz-transform: translateY(-40%);
+  -o-transform: translateY(-40%);
+  -ms-transform: translateY(-40%);
+  -webkit-transform: translateY(-40%);
+  transform: translateY(-40%);
+  font-size: 2em; }
+
+.cancel {
+  color: red; }
+
+.sure {
+  color: green;
+  margin-left: 25px; }
+
+.exitIcon, .deleteIcon {
+  width: 50px; }
+
+.bucketIcon {
+  width: 60px; }
+
+.eraserIcon {
+  width: 40px;
+  position: relative;
+  top: 47%;
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
+.user {
+  height: 100px;
+  margin-bottom: 20px;
+  word-wrap: break-word; }
+
+.userColor {
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+  display: inline-block;
+  margin: 0 10px; }
+
+.username {
+  font-size: 2.5em;
+  font-weight: 100;
+  display: inline-block;
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
+.otherUser {
+  margin-top: 10px;
+  text-align: right; }
+
+.otherUserColor {
+  width: 45px;
+  height: 45px;
+  border-radius: 23px;
+  display: inline-block;
+  margin: 0 10px; }
+
+.otherUsername {
+  font-size: 1.8em;
+  display: inline-block;
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  vertical-align: middle; }
+
+.chooseColor {
+  width: 280px;
+  text-align: center;
+  position: relative;
+  margin: 0 auto;
+  bottom: 0; }
+
+.mediumCircle {
+  width: 55px;
+  height: 55px;
+  border-radius: 28px;
+  display: inline-block;
+  margin: 5px 5px; }
+
+.mediumCircle:hover {
+  cursor: pointer; }
+
+.changeColor {
+  font-size: 2.5em;
+  font-weight: 100;
+  margin-bottom: 20px; }
+
+.userInput, .colorInput, .hallway {
+  height: 100px;
+  margin-top: -100px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 100%; }
+
+.usernameInput, .roomInput {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #fff;
+  outline: none;
+  padding-bottom: 15px;
+  text-align: center;
+  width: 400px;
+  font-size: 200%;
+  letter-spacing: 3px;
+  color: #fff;
+  font-weight: 100; }
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  display: inline-block;
+  margin: 0 10px 30px 0; }
+
+.circle:hover {
+  cursor: pointer; }
+
+.title {
+  font-size: 200%;
+  font-weight: 100; }
+
+.chooseRoom {
+  margin: 0 auto;
+  width: 70%; }
+
+.roomButton {
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  margin: 0 5px 10px 5px;
+  background-color: black;
+  border: solid #3498db 2px; }
+
+.roomButton:hover {
+  cursor: pointer;
+  border: solid black 2px;
+  background: #3498db; }
+
+.newRoom {
+  margin-top: 50px; }
